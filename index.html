@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
 
-  <body>
+  <body onload="fetchReviews()">
     <header id="header">
       <div id="navbar">
         <p id="name">RestroomRate | Evanston</p>
@@ -55,10 +55,20 @@
       </section>
       <section id="feed">
         <div id="review">
-          <h3 class="review-header">Next of Kin</h3>
-          <h3 class="review">Great mirrors and very clean, highly reccomend</h3>
+          <div id="review-header-container">
+            <div>
+              <h3 class="review-header">Next of Kin</h3>
+              <p class="author">Submitted by @LeilaFoulon</p>
+            </div>
+            <div id="review-score-container">
+              <p class="review-score">8</p>
+              <p class="review-total">/10</p>
+            </div>
+          </div>
+          <h3 class="review">Great mirrors and very clean, highly recommend</h3>
         </div>
       </section>
     </main>
+    <script type="text/javascript" src="./app.js"></script>
   </body>
 </html>

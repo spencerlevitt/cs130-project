@@ -84,12 +84,68 @@ h1 {
 #feed {
   margin-left: 15%;
   margin-right: 15%;
+  padding-top: 50px;
   align-items: center;
   justify-content: center;
 }
 
 #review {
   background-color: rgb(232, 232, 232);
+  padding-top: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 30px;
+  border-radius: 10px;
   width: 75%;
   align-self: center;
+  margin-bottom: 50px;
+}
+
+.review-header {
+  font-family: "Archivo";
+  font-size: 30px;
+}
+
+.author {
+  font-family: "Archivo";
+  font-size: 18px;
+  color: gray;
+  margin-top: -20px;
+}
+
+#review-header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#review-score-container {
+  background-color: black;
+  border-radius: 10px;
+  width: 125px;
+  height: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-score {
+  font-family: "Archivo";
+  font-weight: bold;
+  color: white;
+  font-size: 60px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.review-total {
+  font-family: "Archivo";
+  font-weight: bold;
+  color: whitesmoke;
+  margin-bottom: -10px;
+}
+
+.review {
+  font-family: "Archivo";
+  font-weight: 400;
 }
