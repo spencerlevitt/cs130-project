@@ -45,3 +45,41 @@ const fetchReviews = () => {
       </div>`;
   });
 };
+
+const onOpenModal = () => {
+  console.log("Open modal");
+  const modalElem = document.getElementById("submitModal");
+  modalElem.style.display = "block";
+};
+
+const onCloseModal = () => {
+  console.log("Close modal");
+  const modalElem = document.getElementById("submitModal");
+  modalElem.style.display = "none";
+};
+
+const onReviewSubmit = (form) => {
+  const userName = document.getElementById("uname").value;
+  const locationName = document.getElementById("lname").value;
+  const review = document.getElementById("review").value;
+  const rating = document.getElementById("rating").value;
+
+  const elem = document.getElementById("feed");
+  elem.innerHTML += `<div id="review">
+        <div id="review-header-container">
+          <div>
+            <h3 class="review-header">${locationName}</h3>
+            <p class="author">Submitted by @${userName}</p>
+          </div>
+          <div id="review-score-container">
+            <p class="review-score">${rating}</p>
+            <p class="review-total">/10</p>
+          </div>
+        </div>
+        <h3 class="review">${review}</h3>
+      </div>`;
+
+  onCloseModal();
+  //window.scrollTo(0, document.body.scrollHeight);
+  window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+};

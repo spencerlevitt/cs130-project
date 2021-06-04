@@ -37,18 +37,76 @@
       </div>
     </header>
     <main>
+      <!-- The Modal -->
+      <div id="submitModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close" onclick="onCloseModal()">&times;</span>
+            <h2>Submit a Review</h2>
+          </div>
+          <div class="modal-body">
+            <label for="uname">Username</label>
+            <input
+              type="text"
+              id="uname"
+              name="username"
+              placeholder="Your username..."
+            />
+
+            <div class="spacer"></div>
+
+            <label for="lname">Location Name</label>
+            <input
+              type="text"
+              id="lname"
+              name="locationname"
+              placeholder="Location..."
+            />
+
+            <div class="spacer"></div>
+
+            <div>
+              <textarea
+                id="review"
+                name="review"
+                placeholder="Write something.."
+                style="height: 200px"
+              ></textarea>
+            </div>
+
+            <label for="rating">Rating</label>
+            <select id="rating" name="rating">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+
+            <button id="learn-more" onclick="onReviewSubmit()">
+              <p id="learn-more-text">SUBMIT</p>
+            </button>
+          </div>
+        </div>
+      </div>
       <section>
         <div id="hero">
           <div id="inner">
             <p class="sub-header">
               Your trusted restroom guide in
-              <span class="orange-text">Evanston.</span>
+              <span class="blue-text">Evanston.</span>
             </p>
 
             <h1>Always be prepared.</h1>
 
-            <button id="learn-more" onclick="onButtonPress()">
-              <p id="learn-more-text">LEARN MORE</p>
+            <button id="learn-more" onclick="onOpenModal()">
+              <p id="learn-more-text">SUBMIT A REVIEW</p>
             </button>
           </div>
         </div>
