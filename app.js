@@ -38,7 +38,7 @@ const fetchReviews = () => {
         <div id="review-header-container">
           <div>
             <h3 class="review-header">${review.restaurantName}</h3>
-            <p class="author">Submitted by @${review.author} | ${review.location}</p>
+            <a href="https://maps.google.com/?q=${review.location}"><p class="author">Submitted by @${review.author} | ${review.location}</p></a>
           </div>
           <div id="review-score-container">
             <p class="review-score">${review.score}</p>
@@ -74,7 +74,7 @@ const onReviewSubmit = (form) => {
         <div id="review-header-container">
           <div>
             <h3 class="review-header">${locationName}</h3>
-            <p class="author">Submitted by @${userName} | ${location}</p>
+            <a href="https://maps.google.com/?q=${location}"><p class="author">Submitted by @${userName} | ${location}</p></a>
           </div>
           <div id="review-score-container">
             <p class="review-score">${rating}</p>
